@@ -1,19 +1,22 @@
+/* Reset and Basic Styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
+/* Body Style */
 body {
-  background-color: #f75b5b;
   background-image: url(https://img.freepik.com/premium-photo/guitar-minimalist-background_863013-182831.jpg?w=826);
   display: flex;
+  flex-direction: column;
+  background-position: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+/* Container Style */
 .container {
   background-color: #e6a630;
   padding: 30px;
@@ -22,6 +25,7 @@ body {
   text-align: center;
   width: 90%;
   max-width: 900px;
+  flex-grow: 1; /* Allows content to expand */
 }
 
 h1 {
@@ -29,6 +33,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Button Style */
 button {
   background-color: #28a745;
   color: white;
@@ -43,37 +48,25 @@ button:hover {
   background-color: #218838;
 }
 
-.hidden {
-  display: none;
-}
-
-.player-input,
-.quiz,
-.results {
-  margin-top: 30px;
-}
-
-#options div {
-  margin-bottom: 30px;
+/* Input Styles */
+input[type="number"],
+input[type="text"] {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 60px rgb(197, 28, 28);
+  margin-bottom: 10px;
 }
 
 input[type="number"] {
   width: 50px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 60px rgb(197, 28, 28);
-  margin-left: 10px;
 }
 
 input[type="text"] {
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 60px rgb(197, 28, 28);
-  display: block;
   width: 100%;
+  display: block;
 }
 
+/* Scoreboard */
 #scoreboard {
   margin-top: 20px;
 }
@@ -88,4 +81,40 @@ input[type="text"] {
 
 .wrong {
   color: red;
+}
+
+/* Footer Style */
+.footer {
+  background-color: #5856569f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Ensures footer stays at the bottom */
+}
+
+.footer a {
+  color: #2c35b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Wrapper for Full-Height Layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
 }
